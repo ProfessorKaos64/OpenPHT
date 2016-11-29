@@ -124,7 +124,7 @@ endif(ENABLE_DVD_DRIVE)
 
 configure_file(${root}/xbmc/DllPaths_generated.h.in ${CMAKE_BINARY_DIR}/xbmc/DllPaths_generated.h)
 
-if(NOT TARGET_AML)
+if(NOT TARGET_AML OR NOT TARGET_STEAMLINK)
 find_package(SSE)
 if(NOT TARGET_WIN32)
   if(SSSE3_FOUND)
